@@ -1,4 +1,4 @@
-def quick_sort(lst, l, r):
+def quick_sort(lst: List[int], l: int, r: int) -> None:
   if r < l + 2:
     return 0
 
@@ -13,10 +13,3 @@ def quick_sort(lst, l, r):
 
   quick_sort(lst, l, i)
   quick_sort(lst, i + 1, r)
-
-with open('QuickSort.txt', 'r') as f:
-  lines = f.readlines()
-
-lst = [int(line.strip()) for line in lines]
-quick_sort(lst, 0, len(lst))
-print(lst)
